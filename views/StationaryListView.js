@@ -6,12 +6,10 @@
  * To change this template use File | Settings | File Templates.
  */
 
-define(['backbone', 'underscore', 'jquery', 'i18n!nls/ItemList'], function(Backbone, _, $, Item){
+define(['backbone', 'underscore', 'jquery'], function(Backbone, _, $){
 
     var RecordView = Backbone.View.extend({
 
-//this  will represent a single row of the table for an employee
-        Convert: Item,
         el:"#ListItemsContainer",
         template: _.template($('#ListItemConverter').html()),
         initialize: function() {
@@ -20,9 +18,6 @@ define(['backbone', 'underscore', 'jquery', 'i18n!nls/ItemList'], function(Backb
             $(this.el).html(this.template(this.model.toJSON()));
             return $(this.el);
         }
-
-
-
     });
 
     return RecordView;
