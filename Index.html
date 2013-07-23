@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Stationary Shop List</title>
+</head>
+<body>
+
+	<div id="ListItemsContainer"></div>
+
+    </script>
+	<script data-main="app.js" src="lib/require.js"></script>
+<script id="ListItem" type="text/template">
+    <ui>
+        <li><%= pencil %></li>
+        <li><%= eraser %></li>
+    </ui>
+</script>
+<script id="ListItemConverter" type="text/template">
+
+    <ui>
+        <li><%= Converter(pencil) %></li>
+        <li><%= Converter(eraser) %></li>
+    </ui>
+</script>
+
+</body>
+
+
